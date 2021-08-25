@@ -1,6 +1,20 @@
+main {
+  display: flex;
+}
+
+#trybewarts-header-title {
+  text-align: center;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+}
+
 .header {
   display: flex;
   background-color: rgb(50, 167, 145);
+  align-items: center;
 }
 
 .trybewarts-login {
