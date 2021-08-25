@@ -38,3 +38,7 @@ main {
 .nivel-satisfacao {
   display: flex;
 }
+
+.agreement-check {
+  display: flex;
+}
