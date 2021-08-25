@@ -35,3 +35,11 @@ main {
   display: flex;
   flex-direction: row;
 }
+
+.nivel-satisfacao {
+  display: flex;
+}
+
+.agreement-check {
+  display: flex;
+}
