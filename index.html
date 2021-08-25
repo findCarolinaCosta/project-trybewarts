@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link type="text/css" href="style.css" rel="stylesheet">
     <title>Trybewarts</title>
 </head>
+
 <body>
     <header class="header">
         <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg">
@@ -20,19 +22,23 @@
     <main>
         <form id="evaluation-form">
             <div class="nome-sobrenome">
-            <input name="nome" placeholder="Nome" id="input-name">
-            <input name="sobrenome" placeholder="Sobrenome" id="input-lastname">
+                <input name="nome" placeholder="Nome" id="input-name">
+                <input name="sobrenome" placeholder="Sobrenome" id="input-lastname">
             </div>
-            <input name="email" placeholder="Email" id="input-email">
-            <select id="house">
-                <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-                <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-                <option value="Corvinode" id="corvinode-house">Corvinode</option>
-                <option value="Pytherina" id="pytherina-house">Pytherina</option>
-            </select>
+            <div class="email-casa">
+                <input name="email" placeholder="Email" id="input-email">
+                <label for="house">Casa: </label>
+                <select id="house">
+                    <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+                    <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+                    <option value="Corvinode" id="corvinode-house">Corvinode</option>
+                    <option value="Pytherina" id="pytherina-house">Pytherina</option>
+                </select>
+            </div>
         </form>
         <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg">
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

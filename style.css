@@ -12,7 +12,7 @@ main {
   flex-direction: column;
 }
 
-#trybewarts-forms-logo{
+#trybewarts-forms-logo {
   height: 500px;
 }
 
@@ -28,5 +28,9 @@ main {
 }
 
 .nome-sobrenome {
+  display: flex;
+}
+
+.email-casa {
   display: flex;
 }
