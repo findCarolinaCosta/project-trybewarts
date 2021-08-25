@@ -33,4 +33,5 @@ main {
 
 .email-casa {
   display: flex;
+  flex-direction: row;
 }
