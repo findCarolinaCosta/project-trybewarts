@@ -11,3 +11,20 @@ function validarLogin() {
 }
 
 botaoEntrar.addEventListener('click', validarLogin);
+
+const buttonSubmit = document.getElementById('submit-btn');
+const checkboxAgreement = document.getElementById('agreement');
+
+function habilitaSubmit() {
+  const checkboxAgreementChecked = document.getElementById('agreement').checked;
+  if (checkboxAgreementChecked === false) {
+    buttonSubmit.disabled = true;
+  } else {
+    buttonSubmit.disabled = false;
+  }
+  console.log(buttonSubmit.disabled);
+  console.log(checkboxAgreementChecked);
+}
+
+buttonSubmit.disabled = true;
+checkboxAgreement.addEventListener('click', habilitaSubmit);
