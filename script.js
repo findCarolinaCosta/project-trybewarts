@@ -22,9 +22,22 @@ function habilitaSubmit() {
   } else {
     buttonSubmit.disabled = false;
   }
-  console.log(buttonSubmit.disabled);
-  console.log(checkboxAgreementChecked);
 }
 
 buttonSubmit.disabled = true;
 checkboxAgreement.addEventListener('click', habilitaSubmit);
+
+const textarea = document.querySelector('textarea');
+function countCaractere(event) {
+  let count = document.getElementsByClassName('counter');
+  const current = event.currentTarget;
+  const maxLength = current.getAttribute('maxlength');
+  const currentLength = current.value.length;
+
+  if (currentLength >= maxLength) {
+    alert('Atingido o máximo de caractere');
+  }
+  count = maxLength - currentLength;
+  console.log(count); // não está funcionando
+}
+textarea.addEventListener('input', countCaractere);
