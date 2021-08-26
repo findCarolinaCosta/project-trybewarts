@@ -1,4 +1,4 @@
-const inputEmail = document.getElementById('input-email');
+const inputEmail = document.getElementById('input-email-header');
 const inputSenha = document.getElementById('input-senha');
 const botaoEntrar = document.getElementById('botao-entrar');
 
