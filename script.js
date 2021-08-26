@@ -41,3 +41,55 @@ function countCaractere(event) {
   document.getElementById('counter').innerText = count;
 }
 textarea.addEventListener('input', countCaractere);
+
+const myStorage = localStorage;
+
+function salvaMaterias() {
+  const materias = document.getElementsByClassName('subject');
+  const arrayMaterias = [];
+
+  for (const index in materias) {
+    if (materias[index].checked === true) {
+      arrayMaterias.push(materias[index].value);
+    }
+  }
+  myStorage.setItem('Matérias', arrayMaterias);
+}
+
+function salvaNota() {
+  const notas = document.getElementsByClassName('notas');
+
+  for (const index in notas) {
+    if (notas[index].checked === true) {
+      myStorage.setItem('Avaliação', notas[index].value);
+    }
+  }
+}
+
+// function removeElementos() {
+//   document.getElementsByClassName('evaluation-form').parentNode.removeChild('input');
+// }
+
+function salvarInputs() {
+  myStorage.setItem('Nome:', document.getElementById('input-name').value + ' ' + document.getElementById('input-lastname').value);
+  myStorage.setItem('Email:', document.getElementById('input-email').value);
+  myStorage.setItem('Casa:', document.getElementById('house').value);
+  myStorage.setItem('Observações:', document.getElementById('textarea').value);
+
+  if (document.getElementById('front-end').checked === true) {
+    myStorage.setItem('Família: ', 'Frontend');
+  } else if (document.getElementById('back-end').checked === true) {
+    myStorage.setItem('Família: ', 'Backend');
+  } else {
+    myStorage.setItem('Família: ', 'Fullstack');
+  }
+
+  salvaMaterias();
+  salvaNota();
+  removeElementos();
+}
+
+buttonSubmit.addEventListener('click', (event) => {
+  event.preventDefault();
+});
+buttonSubmit.addEventListener('click', salvarInputs);
