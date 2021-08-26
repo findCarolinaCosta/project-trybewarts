@@ -29,7 +29,7 @@ checkboxAgreement.addEventListener('click', habilitaSubmit);
 
 const textarea = document.querySelector('textarea');
 function countCaractere(event) {
-  let count = document.getElementsByClassName('counter');
+  let count = document.getElementById('counter');
   const current = event.currentTarget;
   const maxLength = current.getAttribute('maxlength');
   const currentLength = current.value.length;
@@ -39,5 +39,6 @@ function countCaractere(event) {
   }
   count = maxLength - currentLength;
   console.log(count); // não está funcionando
+  document.getElementById('counter').innerText = count;
 }
 textarea.addEventListener('input', countCaractere);
