@@ -38,7 +38,6 @@ function countCaractere(event) {
     alert('Atingido o máximo de caractere');
   }
   count = maxLength - currentLength;
-  console.log(count); // não está funcionando
   document.getElementById('counter').innerText = count;
 }
 textarea.addEventListener('input', countCaractere);
