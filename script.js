@@ -66,9 +66,50 @@ function salvaNota() {
   }
 }
 
-// function removeElementos() {
-//   document.getElementsByClassName('evaluation-form').parentNode.removeChild('input');
-// }
+const main = document.getElementsByTagName('main')[0];
+const localInfos = document.getElementById('infos');
+const localName = 'Nome: ' + localStorage.getItem('Nome:');
+const localEmail = 'Email: ' + localStorage.getItem('Email:');
+const localCasa = 'Casa: ' + localStorage.getItem('Casa:');
+const localFamilia = 'Família: ' + localStorage.getItem('Familia: ');
+const localMateria = 'Matérias: ' + localStorage.getItem('Matérias');
+const localAvaliacao = 'Avaliação: ' + localStorage.getItem('Avaliação');
+const localObs = 'Observações: ' + localStorage.getItem('Observações:');
+
+
+function data() {
+  main.removeChild(document.getElementById('evaluation-form'));
+  const allInformation = [
+    localName,
+    localEmail,
+    localCasa,
+    localFamilia,
+    localMateria,
+    localAvaliacao,
+    localObs
+  ]
+  for (index in allInformation) {
+    const paragraph = document.createElement('p');
+    localInfos.appendChild(paragraph);
+    switch (allInformation[index]) {
+      case 1: allInformation[index] === allInformation[0];
+        paragraph.innerText = allInformation[index];
+      case 2: allInformation[index] === allInformation[1];
+        paragraph.innerText = allInformation[index];
+      case 3: allInformation[index] === allInformation[6];
+        paragraph.innerText = allInformation[index];
+      case 3: allInformation[index] === allInformation[2];
+        paragraph.innerText = allInformation[index];
+      case 5: allInformation[index] === allInformation[3];
+        paragraph.innerText = allInformation[index];
+      case 6: allInformation[index] === allInformation[4];
+        paragraph.innerText = allInformation[index];
+      case 7: allInformation[index] === allInformation[5];
+        paragraph.innerText = allInformation[index];
+    }
+    paragraph.innerText = allInformation[index];
+  }
+}
 
 function salvarInputs() {
   myStorage.setItem('Nome:', document.getElementById('input-name').value + ' ' + document.getElementById('input-lastname').value);
@@ -77,16 +118,15 @@ function salvarInputs() {
   myStorage.setItem('Observações:', document.getElementById('textarea').value);
 
   if (document.getElementById('front-end').checked === true) {
-    myStorage.setItem('Família: ', 'Frontend');
+    myStorage.setItem('Familia: ', 'Frontend');
   } else if (document.getElementById('back-end').checked === true) {
-    myStorage.setItem('Família: ', 'Backend');
+    myStorage.setItem('Familia: ', 'Backend');
   } else {
-    myStorage.setItem('Família: ', 'Fullstack');
+    myStorage.setItem('Familia: ', 'Fullstack');
   }
-
   salvaMaterias();
   salvaNota();
-  removeElementos();
+  data();
 }
 
 buttonSubmit.addEventListener('click', (event) => {
