@@ -1,7 +1,16 @@
 body {
-  background-color: #e7e7e7
+  background-color: #e7e7e7;
 }
 
 header {
   background-color: #32a791;
+}
+
+.close {
+  right: -100%;
+}
+
+.open {
+  transition: 5s;
+  margin: 20px 52%;
 }

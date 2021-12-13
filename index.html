@@ -7,15 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./images/trybewarts-colored.svg" />
   <link type="text/css" href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <title>Trybewarts</title>
 </head>
 
 <body class="m-0 p-0">
-  <header class="flex justify-between align-middle items-center p-5 flex-wrap fixed w-screen">
-    <img class="w-16" src="./images/trybewarts-header-logo.svg">
+  <header class="flex flex-col justify-between align-middle sm:flex-row sm:items-center sm:p-5 sm:flex-wrap sm:fixed sm:w-screen">
+    <a href="#" class="ml-auto p-5">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </a>
+    <img class="w-16 m-auto" src="./images/trybewarts-header-logo.svg">
     <h1 class="mx-auto font-bold text-white text-3xl">Trybewarts</h1>
-    <form class="flex mr-10 flex-wrap gap-5 h-10 items-center h-auto">
+    <form class="fixed close flex flex-col gap-2 sm:mr-10 sm:flex-wrap sm:gap-5 sm:h-10 sm:items-center sm:h-auto">
       <input name="email" placeholder="Email" class="w-40 p-1 rounded-md  items-center outline-none" />
       <input name="password" placeholder="Senha" class="w-40 p-1 rounded-md items-center outline-none" />
       <button class="shadow-xs bg-blue-900 text-white border-blue-900 p-1 w-40 rounded-md items-center">Entrar</button>
