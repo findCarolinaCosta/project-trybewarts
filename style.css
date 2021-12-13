@@ -1,47 +1,7 @@
-/* main {
-  display: flex;
+body {
+  background-color: #e7e7e7
 }
 
-#trybewarts-header-title {
-  text-align: center;
+header {
+  background-color: #32a791;
 }
-
-#evaluation-form {
-  display: flex;
-  width: 675px;
-  flex-direction: column;
-}
-
-#trybewarts-forms-logo {
-  height: 500px;
-}
-
-.header {
-  display: flex;
-  background-color: rgb(50, 167, 145);
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-.trybewarts-login {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nome-sobrenome {
-  display: flex;
-}
-
-.email-casa {
-  display: flex;
-  flex-direction: row;
-}
-
-.nivel-satisfacao {
-  display: flex;
-}
-
-.agreement-check {
-  display: flex;
-} */

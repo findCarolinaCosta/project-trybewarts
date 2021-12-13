@@ -5,78 +5,98 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/trybewarts-colored.svg" />
   <link type="text/css" href="style.css" rel="stylesheet">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <title>Trybewarts</title>
 </head>
 
-<body>
-  <header class="">
-    <!-- <img class="" src="./images/trybewarts-header-logo.svg"> -->
-    <h1 id="trybewarts-header-title">Trybewarts</h1>
-    <form class="">
-      <input name="email" placeholder="Email" id="input-email-header">
-      <input name="password" placeholder="Senha" id="input-senha">
-      <button id="botao-entrar">Entrar</button>
+<body class="m-0 p-0">
+  <header class="flex justify-between align-middle items-center p-5 flex-wrap fixed w-screen">
+    <img class="w-16" src="./images/trybewarts-header-logo.svg">
+    <h1 class="mx-auto font-bold text-white text-3xl">Trybewarts</h1>
+    <form class="flex mr-10 flex-wrap gap-5 h-10 items-center h-auto">
+      <input name="email" placeholder="Email" class="w-40 p-1 rounded-md  items-center outline-none" />
+      <input name="password" placeholder="Senha" class="w-40 p-1 rounded-md items-center outline-none" />
+      <button class="shadow-xs bg-blue-900 text-white border-blue-900 p-1 w-40 rounded-md items-center">Entrar</button>
     </form>
   </header>
-  <main id="main-container" class="inline-grid grid-cols-2 gap-10">
-    <form id="evaluation-form columns-1">
-      <div class="">
-        <input name="nome" placeholder="Nome" id="input-name">
-        <input name="sobrenome" placeholder="Sobrenome" id="input-lastname">
+  <main class="inline-grid grid-cols-2 gap-10 m-10 mt-32">
+    <form id="columns-1">
+      <div class="flex flex-col gap-5 w-auto mb-5">
+          <label for="nome">
+            Nome:
+            <input name="nome" id="nome" class="p-1 rounded-md bg-white w-10/12 ml-3 outline-none">
+          </label>
+          <label for="sobrenome">
+            Sobrenome:
+            <input name="sobrenome" id="sobrenome" class="p-1 rounded-md bg-white w-9/12 ml-3 outline-none">
+          </label>
+          <label for="email">
+            Email:
+            <input name="email" id="email" id="input-email" class="p-1 rounded-md bg-white w-10/12 ml-3 outline-none">
+          </label>
+        <label for="house">
+          Casa: 
+          <select id="house" class="px-10 rounded w-40 bg-white ml-3 p-1 outline-none cursor-pointer">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+        </label>
       </div>
-      <div class="">
-        <input name="email" placeholder="Email" id="input-email">
-        <label for="house">Casa: </label>
-        <select id="house" class="px-4 rounded">
-          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-          <option value="Corvinode" id="corvinode-house">Corvinode</option>
-          <option value="Pytherina" id="pytherina-house">Pytherina</option>
-        </select>
+      <div class="mb-5">
+        <p>Qual sua família?</p>
+        <div class="flex gap-5">
+          <label for="front-end" class="cursor-pointer"><input id="front-end" name="family" type="radio" value="Frontend"> Frontend</label>
+          <label for="back-end" class="cursor-pointer"><input id="back-end" name="family" type="radio" value="Backend"> Backend</label>
+          <label for="fullstack" class="mb-5 cursor-pointer"><input id="fullstack" name="family" type="radio" value="FullStack"> FullStack</label>
+        </div>
+        <p>Qual conteúdo você está com mais vontade de aprender?</p>
+        <div class="flex flex-col">
+          <label for="HOFS" class="cursor-pointer"><input id="HOFS" type="checkbox" value="HoFs" class="cursor-pointer"> HoFs</label>
+          <label for="Jest" class="cursor-pointer"><input id="Jest" type="checkbox" value="Jest" class="cursor-pointer"> Jest</label>
+          <label for="Promises" class="cursor-pointer"><input id="Promises" type="checkbox" value="Promises" class="cursor-pointer"> Promises</label>
+          <label for="React" class="cursor-pointer"><input id="React" type="checkbox" value="React" class="cursor-pointer"> React</label>
+          <label for="SQL" class="cursor-pointer"><input id="SQL" type="checkbox" value="SQL" class="cursor-pointer"> SQL</label>
+          <label for="Python" class="cursor-pointer"><input id="Python" type="checkbox" value="Python" class="cursor-pointer"> Python</label>
+        </div>
       </div>
-      <label for="family" id="label-family">Qual sua família?</label>
-      <div><input id="front-end" name="family" type="radio" value="Frontend"> Frontend</div>
-      <div><input id="back-end" name="family" type="radio" value="Backend"> Backend</div>
-      <div><input id="fullstack" name="family" type="radio" value="FullStack"> FullStack</div>
-      <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
-      <div><input class="" type="checkbox" value="HoFs"> HoFs</div>
-      <div><input class="" type="checkbox" value="Jest"> Jest</div>
-      <div><input class="" type="checkbox" value="Promises"> Promises</div>
-      <div><input class="" type="checkbox" value="React"> React</div>
-      <div><input class="" type="checkbox" value="SQL"> SQL</div>
-      <div><input class="" type="checkbox" value="Python"> Python</div>
-      <div class="aspect-w-16 aspect-h-9">
-        <label id="" for="rate">Como você avalia a Trybewarts?</label>
-        <input class="" id="1" name="rate" type="radio" value="1">1
-        <input class="" id="2" name="rate" type="radio" value="2">2
-        <input class="" id="3" name="rate" type="radio" value="3">3
-        <input class="" id="4" name="rate" type="radio" value="4">4
-        <input class="" id="5" name="rate" type="radio" value="5">5
-        <input class="" id="6" name="rate" type="radio" value="6">6
-        <input class="" id="7" name="rate" type="radio" value="7">7
-        <input class="" id="8" name="rate" type="radio" value="8">8
-        <input class="" id="9" name="rate" type="radio" value="9">9
-        <input class="" id="10" name="rate" type="radio" value="10">10
+      <div class="mb-4">
+        <label for="rate">Como você avalia a Trybewarts?</label>
+        <label for="1" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="1" name="rate" type="radio" value="1">1</input></label>
+        <label for="2" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="2" name="rate" type="radio" value="2">2</input></label>
+        <label for="3" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="3" name="rate" type="radio" value="3">3</input></label>
+        <label for="4" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="4" name="rate" type="radio" value="4">4</input></label>
+        <label for="5" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="5" name="rate" type="radio" value="5">5</input></label>
+        <label for="6" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="6" name="rate" type="radio" value="6">6</input></label>
+        <label for="7" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="7" name="rate" type="radio" value="7">7</input></label>
+        <label for="8" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="8" name="rate" type="radio" value="8">8</input></label>
+        <label for="9" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="9" name="rate" type="radio" value="9">9</input></label>
+        <label for="10" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="10" name="rate" type="radio" value="10">10</input></label>
       </div>
-      <label for="textarea" class="">Deixe seu comentário: </label>
-      <textarea name="textarea" id="textarea"></textarea>
-      <span id="counter" value="500">500</span>
-      <div class="">
+      <div class="flex justify-between">
+        <label for="textarea" class="">Deixe seu comentário: </label>
+        <textarea name="textarea" id="textarea" class="p-1 rounded-md bg-white w-8/12 h-32 outline-none"></textarea>
+      </div>
+      <div class="flex justify-end mb-3">
+        <span id="counter" value="500" class="items-end">500 caracteres restantes</span>
+      </div>
+      <div class="mb-3">
         <input type="checkbox" name="agreement" id="agreement" required>
         <label for="agreement" id="label-infos">Você concorda com o uso das informações acima? Você concorda com o
           uso das informações acima?</label>
       </div>
-      <button type="submit" id="" class="">Enviar</button>
+      <button type="submit" id="" class="bg-blue-900 text-white p-2 w-full rounded-md">Enviar</button>
     </form>
     <!-- <section id="infos"></section> -->
     <div class="columns-2">
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg">
     </div>
   </main>
-  <footer>
-    <p>Direitos reservados à Trybewarts©</p>
+  <footer class="flex align-middle flex-wrap bg-gray-900 text-white">
+    <p class=" mx-auto mb-30 p-20">Todos os direitos reservados©</p>
   </footer>
   <script src="script.js"></script>
 </body>
