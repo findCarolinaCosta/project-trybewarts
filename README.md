@@ -1,1 +1,1 @@
-# Projeto em grupo desenvolvido durante minha formação na Trybe
+# Projeto em dupla desenvolvido durante minha formação na Trybe
