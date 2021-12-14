@@ -15,32 +15,34 @@
 </head>
 
 <body class="m-0 p-0">
-  <header class="flex flex-col justify-between align-middle sm:flex-row sm:items-center sm:p-5 sm:flex-wrap sm:fixed sm:w-screen">
-    <a href="#" class="ml-auto p-5">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+  <header class="flex flex-col justify-between align-middle fixed w-screen pb-5 sm:flex-row sm:items-center sm:p-5 sm:flex-wrap sm:fixed sm:w-screen">
+    <a href="#" class="ml-auto p-5" id="menu">
+      <i class="uil uil-signin"></i>
     </a>
     <img class="w-16 m-auto" src="./images/trybewarts-header-logo.svg">
     <h1 class="mx-auto font-bold text-white text-3xl">Trybewarts</h1>
-    <form class="fixed close flex flex-col gap-2 sm:mr-10 sm:flex-wrap sm:gap-5 sm:h-10 sm:items-center sm:h-auto">
-      <input name="email" placeholder="Email" class="w-40 p-1 rounded-md  items-center outline-none" />
-      <input name="password" placeholder="Senha" class="w-40 p-1 rounded-md items-center outline-none" />
-      <button class="shadow-xs bg-blue-900 text-white border-blue-900 p-1 w-40 rounded-md items-center">Entrar</button>
-    </form>
+    <div class="form-header">
+      <form class="fixed close w-screen flex flex-row flex-wrap gap-2 p-5 sm:mr-10 sm:flex-wrap sm:gap-5 sm:h-10 sm:items-center sm:h-auto" id="form-header">
+        <input name="email" placeholder="Email" class="w-40 p-1 rounded-md  items-center outline-none" id="input-email-header"/>
+        <input name="password" placeholder="Senha" class="w-40 p-1 rounded-md items-center outline-none" id="input-senha-header"/>
+        <button class="m-auto shadow-xs bg-blue-900 text-white border-blue-900 p-1 w-40 rounded-md items-center" id="botao-entrar">Entrar</button>
+      </form>
+    </div>
   </header>
-  <main class="inline-grid grid-cols-2 gap-10 m-10 mt-32">
+  <main class="inline-grid sm:grid-cols-2 sm:gap-10 sm:m-10 normalMargin">
     <form id="columns-1">
       <div class="flex flex-col gap-5 w-auto mb-5">
           <label for="nome">
             Nome:
-            <input name="nome" id="nome" class="p-1 rounded-md bg-white w-10/12 ml-3 outline-none">
+            <input name="nome" id="nome" class="p-1 w-full rounded-md bg-white w-auto sm:ml-3 outline-none">
           </label>
           <label for="sobrenome">
             Sobrenome:
-            <input name="sobrenome" id="sobrenome" class="p-1 rounded-md bg-white w-9/12 ml-3 outline-none">
+            <input name="sobrenome" id="sobrenome" class="p-1 w-full rounded-md bg-white w-9/12 sm:ml-3 outline-none">
           </label>
           <label for="email">
             Email:
-            <input name="email" id="email" id="input-email" class="p-1 rounded-md bg-white w-10/12 ml-3 outline-none">
+            <input name="email" id="email" class="p-1 w-full rounded-md bg-white w-10/12 sm:ml-3 outline-none">
           </label>
         <label for="house">
           Casa: 
@@ -53,13 +55,13 @@
         </label>
       </div>
       <div class="mb-5">
-        <p>Qual sua família?</p>
-        <div class="flex gap-5">
+        <p class="mb-2">Qual sua família?</p>
+        <div class="flex flex-col gap-2 sm:flex-row sm:gap-5">
           <label for="front-end" class="cursor-pointer"><input id="front-end" name="family" type="radio" value="Frontend"> Frontend</label>
           <label for="back-end" class="cursor-pointer"><input id="back-end" name="family" type="radio" value="Backend"> Backend</label>
           <label for="fullstack" class="mb-5 cursor-pointer"><input id="fullstack" name="family" type="radio" value="FullStack"> FullStack</label>
         </div>
-        <p>Qual conteúdo você está com mais vontade de aprender?</p>
+        <p class="mb-2">Qual conteúdo você está com mais vontade de aprender?</p>
         <div class="flex flex-col">
           <label for="HOFS" class="cursor-pointer"><input id="HOFS" type="checkbox" value="HoFs" class="cursor-pointer"> HoFs</label>
           <label for="Jest" class="cursor-pointer"><input id="Jest" type="checkbox" value="Jest" class="cursor-pointer"> Jest</label>
@@ -69,7 +71,7 @@
           <label for="Python" class="cursor-pointer"><input id="Python" type="checkbox" value="Python" class="cursor-pointer"> Python</label>
         </div>
       </div>
-      <div class="mb-4">
+      <div class="mb-4 flex flex-col">
         <label for="rate">Como você avalia a Trybewarts?</label>
         <label for="1" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="1" name="rate" type="radio" value="1">1</input></label>
         <label for="2" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="2" name="rate" type="radio" value="2">2</input></label>
@@ -82,9 +84,9 @@
         <label for="9" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="9" name="rate" type="radio" value="9">9</input></label>
         <label for="10" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="10" name="rate" type="radio" value="10">10</input></label>
       </div>
-      <div class="flex justify-between">
+      <div class="sm:flex justify-between">
         <label for="textarea" class="">Deixe seu comentário: </label>
-        <textarea name="textarea" id="textarea" class="p-1 rounded-md bg-white w-8/12 h-32 outline-none"></textarea>
+        <textarea name="textarea" id="textarea" class="p-1 w-full rounded-md bg-white w-8/12 h-32 outline-none"></textarea>
       </div>
       <div class="flex justify-end mb-3">
         <span id="counter" value="500" class="items-end">500 caracteres restantes</span>
@@ -94,15 +96,15 @@
         <label for="agreement" id="label-infos">Você concorda com o uso das informações acima? Você concorda com o
           uso das informações acima?</label>
       </div>
-      <button type="submit" id="" class="bg-blue-900 text-white p-2 w-full rounded-md">Enviar</button>
+      <button type="submit" id="submit-btn" class="bg-blue-900 text-white p-2 w-full rounded-md">Enviar</button>
     </form>
     <!-- <section id="infos"></section> -->
     <div class="columns-2">
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg">
     </div>
   </main>
-  <footer class="flex align-middle flex-wrap bg-gray-900 text-white">
-    <p class=" mx-auto mb-30 p-20">Todos os direitos reservados©</p>
+  <footer class="flex flex-wrap bg-gray-900 text-white">
+    <p class="mx-auto mb-30 p-20">Todos os direitos reservados©</p>
   </footer>
   <script src="script.js"></script>
 </body>
