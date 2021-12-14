@@ -1,6 +1,11 @@
 const inputEmail = document.getElementById('input-email-header');
-const inputSenha = document.getElementById('input-senha');
+const inputSenha = document.getElementById('input-senha-header');
 const botaoEntrar = document.getElementById('botao-entrar');
+const buttonSubmit = document.getElementById('submit-btn');
+const checkboxAgreement = document.getElementById('agreement');
+const menuBtn = document.getElementById('menu');
+      formHeader = document.getElementById('form-header');
+      mainTag = document.getElementsByTagName('main')[0];
 
 function validarLogin() {
   if (inputEmail.value === 'tryber@teste.com' && inputSenha.value === '123456') {
@@ -11,9 +16,6 @@ function validarLogin() {
 }
 
 botaoEntrar.addEventListener('click', validarLogin);
-
-const buttonSubmit = document.getElementById('submit-btn');
-const checkboxAgreement = document.getElementById('agreement');
 
 function habilitaSubmit() {
   const checkboxAgreementChecked = document.getElementById('agreement').checked;
@@ -41,3 +43,19 @@ function countCaractere(event) {
   document.getElementById('counter').innerText = count;
 }
 textarea.addEventListener('input', countCaractere);
+
+
+
+menuBtn.addEventListener('click', () => {
+    formHeader.classList.contains('close') ? (
+    formHeader.classList.remove('close'),
+    formHeader.classList.add('open'),
+    mainTag.classList.remove('normalMargin'),
+    mainTag.classList.add('withMargin')
+  ) : (
+    formHeader.classList.remove('open'), 
+    formHeader.classList.add('close'),
+    mainTag.classList.remove('withMargin'),
+    mainTag.classList.add('normalMargin')
+  )
+})
