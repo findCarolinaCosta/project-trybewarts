@@ -15,34 +15,34 @@
 </head>
 
 <body class="m-0 p-0">
-  <header class="flex flex-col justify-between align-middle fixed w-screen pb-5 sm:flex-row sm:items-center sm:p-5 sm:flex-wrap sm:fixed sm:w-screen">
+  <header class="flex flex-col justify-between align-middle fixed w-screen pb-5 md:flex-row md:items-center md:p-5 md:flex-wrap">
     <a href="#" class="ml-auto p-5" id="menu">
       <i class="uil uil-signin"></i>
     </a>
-    <img class="w-16 m-auto" src="./images/trybewarts-header-logo.svg">
+    <img class="w-16 m-auto md:m-0" src="./images/trybewarts-header-logo.svg">
     <h1 class="mx-auto font-bold text-white text-3xl">Trybewarts</h1>
     <div class="form-header">
-      <form class="fixed close w-screen flex flex-row flex-wrap gap-2 p-5 sm:mr-10 sm:flex-wrap sm:gap-5 sm:h-10 sm:items-center sm:h-auto" id="form-header">
+      <form class="fixed close w-screen flex flex-row flex-wrap gap-2 p-5 md:flex-row md:mr-2 md:p-0 md:w-full md:flex-wrap md:sticky md:gap-5 md:h-10 md:items-center md:h-auto" id="form-header">
         <input name="email" placeholder="Email" class="w-40 p-1 rounded-md  items-center outline-none" id="input-email-header"/>
         <input name="password" placeholder="Senha" class="w-40 p-1 rounded-md items-center outline-none" id="input-senha-header"/>
         <button class="m-auto shadow-xs bg-blue-900 text-white border-blue-900 p-1 w-40 rounded-md items-center" id="botao-entrar">Entrar</button>
       </form>
     </div>
   </header>
-  <main class="inline-grid sm:grid-cols-2 sm:gap-10 sm:m-10 normalMargin">
+  <main class="inline-grid md:grid-cols-2 md:gap-10 md:m-10 md:mt-32 normalMargin">
     <form id="columns-1">
       <div class="flex flex-col gap-5 w-auto mb-5">
           <label for="nome">
             Nome:
-            <input name="nome" id="nome" class="p-1 w-full rounded-md bg-white w-auto sm:ml-3 outline-none">
+            <input name="nome" id="nome" class="p-1 w-full rounded-md bg-white w-auto md:ml-3 outline-none">
           </label>
           <label for="sobrenome">
             Sobrenome:
-            <input name="sobrenome" id="sobrenome" class="p-1 w-full rounded-md bg-white w-9/12 sm:ml-3 outline-none">
+            <input name="sobrenome" id="sobrenome" class="p-1 w-full rounded-md bg-white w-9/12 md:ml-3 outline-none">
           </label>
           <label for="email">
             Email:
-            <input name="email" id="email" class="p-1 w-full rounded-md bg-white w-10/12 sm:ml-3 outline-none">
+            <input name="email" id="email" class="p-1 w-full rounded-md bg-white w-10/12 md:ml-3 outline-none">
           </label>
         <label for="house">
           Casa: 
@@ -56,7 +56,7 @@
       </div>
       <div class="mb-5">
         <p class="mb-2">Qual sua família?</p>
-        <div class="flex flex-col gap-2 sm:flex-row sm:gap-5">
+        <div class="flex flex-col gap-2 md:flex-row md:gap-5">
           <label for="front-end" class="cursor-pointer"><input id="front-end" name="family" type="radio" value="Frontend"> Frontend</label>
           <label for="back-end" class="cursor-pointer"><input id="back-end" name="family" type="radio" value="Backend"> Backend</label>
           <label for="fullstack" class="mb-5 cursor-pointer"><input id="fullstack" name="family" type="radio" value="FullStack"> FullStack</label>
@@ -84,7 +84,7 @@
         <label for="9" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="9" name="rate" type="radio" value="9">9</input></label>
         <label for="10" class="cursor-pointer"><input class="mr-1 cursor-pointer" id="10" name="rate" type="radio" value="10">10</input></label>
       </div>
-      <div class="sm:flex justify-between">
+      <div class= md:flex justify-between">
         <label for="textarea" class="">Deixe seu comentário: </label>
         <textarea name="textarea" id="textarea" class="p-1 w-full rounded-md bg-white w-8/12 h-32 outline-none"></textarea>
       </div>

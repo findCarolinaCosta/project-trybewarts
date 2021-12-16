@@ -6,27 +6,38 @@ header {
   background-color: #32a791;
 }
 
-main {
-  padding: 5vh;
+@media (max-width: 768px) {
+  main {
+    padding: 5vh;
+  }
+  
+  .normalMargin {
+    margin-top: 200px;
+    transition: 1s;
+  }
+  
+  .withMargin {
+    margin-top: 300px;
+    transition: 1s;
+  }
+  
+  .close {
+    right: -100%;
+    transition: 1s;
+  }
+  
+  .open {
+    right: 0;
+    transition: 1s;
+    background-color: #32a791;
+  }
 }
 
-.normalMargin {
-  margin-top: 200px;
-  transition: 1s;
-}
-
-.withMargin {
-  margin-top: 300px;
-  transition: 1s;
-}
-
-.close {
-  right: -100%;
-  transition: 1s;
-}
-
-.open {
-  right: 0;
-  transition: 1s;
-  background-color: #32a791;
+@media (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+  .close {
+    right: 100%;
+  }
 }
