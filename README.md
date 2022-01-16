@@ -33,4 +33,5 @@ Click on the index.html file, to open in browser.
 Delete the .git folder to start with a new history.
 
 ## Project report
-Project carried out to fix what I learned about forms, is not yet fully finalized.
+- Project made in pair
+- Project carried out to fix what I learned about forms, is not yet fully finalized.
